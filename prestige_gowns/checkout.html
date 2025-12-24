@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Gowns | Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu">☰ MENU</div>
+        <div class="logo">PG</div>
+        <nav class="top-nav">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Shop</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <span class="cart-indicator">🛒 Cart (<span id="cart-count">0</span>)</span>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="checkout">
+        <h2>Checkout</h2>
+
+        <div class="checkout-grid">
+            <form class="checkout-form" onsubmit="placeOrder(event)">
+                <h4>Billing Details</h4>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="Institution">
+                <textarea placeholder="Delivery Address" required></textarea>
+                <button type="submit">Place Order</button>
+            </form>
+
+            <div class="order-summary">
+                <h4>Order Summary</h4>
+                <ul id="checkout-items"></ul>
+                <p id="summary-total">Total: R0.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="confirmation" id="confirmation">
+        <h3>Thank You for Your Order!</h3>
+        <p>Your order has been placed successfully. A confirmation email has been sent to you.</p>
+    </section>
+
+    <script src="js/cart.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">&copy; 2026 Prestige Gowns.</footer>
+    </section>
+
+</body>
+</html>
