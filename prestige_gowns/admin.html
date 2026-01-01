@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Orders</title>
+</head>
+<body>
+    <h2>Orders</h2>
+    <?php
+    include 'backend/db.php';
+    $result = $conn->query("SELECT * FROM orders ORDER BY order_date DESC");
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<p><strong>{$row['name']}</strong> - R{$row['total']}<br>{$row['items']}</p><hr>";
+    }
+    ?>
+</body>
+</html> 
