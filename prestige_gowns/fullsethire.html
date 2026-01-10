@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Gowns | Full Set Hire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu">☰ MENU</div>
+        <div class="logo">PG</div>
+        <nav class="top-nav">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Shop</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="checkout.html">Check out</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="wishlist.html" class="wishlist-indicator" aria-label="View wishlist">♡ Wishlist (<span
+                    id="wishlist-count">0</span>)</a>
+            <a href="checkout.html" class="cart-indicator" aria-label="Go to checkout">🛒 Cart (<span
+                    id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="product-page wc-style">
+        <a href="services.html" class="back-link">← Back to Shop</a>
+
+        <!-- Product hero-->
+        <section class="product-hero">
+
+            <!-- left: gallery -->
+            <div class="product-gallery">
+
+                <div class="thumbnails-column">
+                    <img src="./_images/Full Set.JPG" onclick="changeImage(0)" alt="Full Set 1">
+                    <img src="./_images/Belt 5.JPG" onclick="changeImage(1)" alt="Full Set 2">
+                    <img src="./_images/Gown.JPG" onclick="changeImage(2)" alt="Full Set 3">
+                    <img src="./_images/Hat.JPG" onclick="changeImage(3)" alt="Full Set 4">
+                    <img src="./_images/Bib 1.png" onclick="changeImage(4)" alt="Full Set 5">
+                </div>
+
+                <div class="Main-image-wrapper">
+                    <button class="img-nav prev" onclick="prevImage()">❮</button>
+                    <img id="current-image" src="./_images/Full Set.JPG" alt="Full Set Hire Image">
+                    <button class="img-nav next" onclick="nextImage()">❯</button>
+
+                </div>
+            </div>
+
+            <!-- Right: product info-->
+            <aside class="product-info" data-name="Full Set Hire" data-price="350">
+
+                <p class="price">R350,00</p>
+
+                <p class="short-desc">Quality full set for graduations.</p>
+                <div class="option-row">
+                    <span class="options-title">Institution</span>
+                    <div class="options-buttons">
+                        <button>University of Johannesburg</button>
+                    </div>
+                </div>
+
+                <!-- Qualification-->
+                <div class="option-row">
+                    <span class="option-title">Qualification</span>
+                    <div class="Option-values" data-group="Qualification">
+                        <button>Diploma</button>
+                        <button>Advanced Diploma</button>
+                        <button>Degree</button>
+                        <button>Honours Degree</button>
+                    </div>
+                </div>
+
+                <!-- Faculty-->
+                <div class="option-row">
+                    <span class="option-title">Faculty</span>
+                    <div class="Options-values" data-group="faculty">
+                        <button>Business & Economics</button>
+                        <button>Humanities</button>
+                        <button>Education</button>
+                        <button>Engineering</button>
+                        <button>Health Sciences</button>
+                        <button>Art & Design</button>
+                        <button>Others</button>
+                    </div>
+                </div>
+
+                <!-- Size-->
+                <div class="option-row">
+                    <span class="option-title">Size</span>
+                    <div class="Option-values" data-group="size">
+                        <button>Small</button>
+                        <button>Medium</button>
+                        <button>Large</button>
+                        <button>X-Large</button>
+                    </div>
+                </div>
+
+                <button class="add-to-cart-btn" onclick="addProductDetailToCart()" disabled aria-disabled="true">Add To
+                    Cart</button>
+            </aside>
+        </section>
+
+    </main>
+    <script src="js/cart.js"></script>
+
+    <footer class="footer">&copy; 2026 Prestige Gowns.</footer>
+
+</body>
+
+</html>

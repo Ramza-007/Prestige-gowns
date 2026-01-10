@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Gowns | Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu">☰ MENU</div>
+        <div class="logo">PG</div>
+        <nav class="top-nav">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Shop</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="checkout.html">Check out</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="wishlist.html" class="wishlist-indicator" aria-label="View wishlist">♡ Wishlist (<span
+                    id="wishlist-count">0</span>)</a>
+            <a href="checkout.html" class="cart-indicator" aria-label="Go to checkout">🛒 Cart (<span
+                    id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="shop-container" id="product-detail">
+        <aside class="filters">
+            <h4>Institutions</h4>
+            <ul>
+                <li><input type="checkbox" id="uni1" name="uni1"><label for="uni1"> UJ Attire</label></li>
+            </ul>
+
+            <!-- Cart Section (moved to sidebar) -->
+            <section class="cart">
+                <h5>Your Cart</h5>
+                <ul id="cart-items"></ul>
+                <p id="cart-total">Total: R0.00</p>
+                <button id="clear-cart" onclick="clearCart()" class="btn-clear">Clear Cart</button>
+                <a href="checkout.html" id="goto-checkout" class="btn-checkout">Go to Checkout</a>
+            </section>
+
+
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products">
+
+            <h2 class="products-heading">For Hire</h2>
+            <div class="products-list for-hire">
+                <div class="product">
+                    <a href="product.html?id=full-set-hire"><img src="./_images/Full Set.JPG" alt="Full Set" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=full-set-hire" style="text-decoration:none;color:inherit;">Full Set Hire</a></h5>
+                    <span>R350</span>
+                    <button onclick="openProductOptions('full-set-hire')">Add to Cart</button>
+                </div>
+
+                <!-- Bib Hire -->
+                <div class="product">
+                    <a href="product.html?id=bib-hire"><img src="./_images/Bib 1.png" alt="Bib" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=bib-hire" style="text-decoration:none;color:inherit;">Bib Hire</a></h5>
+                    <span>R250</span>
+                    <button onclick="openProductOptions('bib-hire')">Add to Cart</button>
+                </div>
+
+                <!-- Hat Hire -->
+                <div class="product">
+                    <a href="product.html?id=hat-hire"><img src="./_images/Hat.JPG" alt="Hat" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=hat-hire" style="text-decoration:none;color:inherit;">Hat Hire</a></h5>
+                    <span>R200</span>
+                    <button onclick="openProductOptions('hat-hire')">Add to Cart</button>
+                </div>
+
+                <!-- Gown Hire -->
+                <div class="product">
+                    <a href="product.html?id=gown-hire"><img src="./_images/Gown.JPG" alt="Gown" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=gown-hire" style="text-decoration:none;color:inherit;">Gown Hire</a></h5>
+                    <span>R250</span>
+                    <button onclick="openProductOptions('gown-hire')">Add to Cart</button>
+                </div>
+
+                <!-- Belt Hire (link to product page) -->
+                <div class="product">
+                    <a href="product.html?id=belt-hire"><img src="./_images/Belt 4.png.jpeg" alt="Belt"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=belt-hire" style="text-decoration:none;color:inherit;">Belt Hire</a></h5>
+                    <span>R150</span>
+                    <button onclick="openProductOptions('belt-hire')">Add to Cart</button>
+                </div>
+
+                <!-- Certificate Roll Hire -->
+                <div class="product">
+                    <a href="product.html?id=certificate-roll-hire"><img src="./_images/Roll Paper.png" alt="Roll" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=certificate-roll-hire" style="text-decoration:none;color:inherit;">Certificate
+                            Scroll hire</a></h5>
+                    <span>R150</span>
+                    <button onclick="openProductOptions('certificate-roll-hire')">Add to Cart</button>
+                </div>
+            </div>
+
+            <h2 class="products-heading">For Sale</h2>
+            <div class="products-list for-sale">
+                <div class="product">
+                    <img src="./_images/Full Set.JPG" alt="Full Set" width="980" height="1280">
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=full-set" style="text-decoration:none;color:inherit;">Full Set
+                            Purchase</a></h5>
+                    <span>R2100</span>
+                    <button onclick="openProductOptions('full-set')">Add to Cart</button>
+                </div>
+
+                <!-- UJ Bib Purchase -->
+                <div class="product">
+                    <a href="product.html?id=bib"><img src="./_images/Bib 1.png" alt="Bib" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=bib" style="text-decoration: none;color:inherit;"> Bib Purchase</a></h5>
+                    <span>R500</span>
+                    <button onclick="openProductOptions('bib')">Add to Cart</button>
+                </div>
+
+                <!-- Hat Purchase (link to product page) -->
+                <div class="product">
+                    <a href="product.html?id=hat"><img src="./_images/Hat.JPG" alt="Hat" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=hat" style="text-decoration:none;color:inherit;">Hat Purchase</a></h5>
+                    <span>R350</span>
+                    <button onclick="openProductOptions('hat')">Add to Cart</button>
+                </div>
+
+                <!-- Gown Purchase -->
+                <div class="product">
+                    <a href="product.html?id=gown"><img src="./_images/Gown.JPG" alt="Gown" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=gown" style="text-decoration:none;color:inherit;">Gown Purchase</a></h5>
+                    <span>R900</span>
+                    <button onclick="openProductOptions('gown')">Add to Cart</button>
+                </div>
+
+
+                <!-- Belt Purchase (link to product page) -->
+                <div class="product">
+                    <a href="product.html?id=belt"><img src="./_images/Belt.png.jpeg" alt="Belt" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=belt" style="text-decoration:none;color:inherit;">Belt Purchase</a></h5>
+                    <span>R350</span>
+                    <button onclick="openProductOptions('belt')">Add to Cart</button>
+                </div>
+
+
+                <!-- Certificate Roll -->
+                <div class="product">
+                    <a href="product.html?id=certificate-roll"><img src="./_images/Roll Paper.png" alt="Roll" width="980"
+                            height="1280"></a>
+                    <button class="wish-btn" onclick="toggleWishBtn(this)" aria-label="Add to wishlist">♡</button>
+                    <h5><a href="product.html?id=certificate-roll" style="text-decoration:none;color:inherit;">Certificate
+                            Scroll</a></h5>
+                    <span>R300</span>
+                    <button onclick="openProductOptions('certificate-roll')">Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="js/cart.js"></script>
+
+        <!-- Footer -->
+        <footer class="footer">&copy; 2026 Prestige Gowns.</footer>
+</body>
+
+</html>
